@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+
+    <color name="overlay_dark_50">#40000000</color>
+    <color name="material_blue">#6452f0</color>
+    <color name="color_grey_light">#e6e6e6</color>
+
+    <color name="colorAccent">#000000</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <color name="color_dark_gray">#2D2D2D</color>
+    <color name="color_gray">#5F5F5F</color>
+    <color name="color_light_gray">#999999</color>
+    <color name="color_light_blue">#E8E9F1</color>
+
+</resources>

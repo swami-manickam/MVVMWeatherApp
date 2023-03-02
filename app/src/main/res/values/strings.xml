@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!--Common Messages-->
+    <string name="error_network_connectivity">Could not connect to Server please enable internet
+    connection and try again</string>
+    <string name="error_get_back_you">Something Went wrong. Please stay tuned until back you!!</string>
+
+    <!--Custom Progress Dialog-->
+    <string name="progress_dialog_message">Please wait, We are fetching data…</string>
+
+    <string name="search">Search</string>
+    <string name="today">Today</string>
+    <string name="search_city_weather">Search City Weather</string>
+    <string name="search_for_a_city">Search for a city</string>
+    <string name="enter_city_name">Please enter your city name</string>
+    <string name="wind">Wind:</string>
+    <string name="pressure">Pressure:</string>
+    <string name="humidity">Humidity:</string>
+    <string name="sunrise">Sunrise:</string>
+    <string name="sunset">Sunset:</string>
+
+    <string name="wind_notation">m/s</string>
+    <string name="pressure_notation">hPa</string>
+    <string name="humidity_notation">&#x0025;</string>
+
+
+
+</resources>

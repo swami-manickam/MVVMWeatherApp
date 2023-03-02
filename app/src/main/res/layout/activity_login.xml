@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_find_city_weather"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@drawable/bg_gray_rounded_color"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/search_city_weather"
+            android:paddingLeft="@dimen/_12sdp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_label_search_for_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxxlarge"
+            android:text=""
+            android:textSize="@dimen/text_size_xlarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_find_city_weather" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_weather_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:background="@drawable/bg_blue_rounded_corner"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_search_for_city">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_weather_symbol"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_today_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_label_today" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_label_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:text="@string/today"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_xxlarge"
+                app:layout_constraintStart_toEndOf="@+id/iv_weather_symbol"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_today_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/text_size_large"
+                android:textColor="@color/color_white"
+                app:layout_constraintStart_toStartOf="@+id/tv_label_today"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_today"
+                tools:text="" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:maxLength="5"
+                android:text="0"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_xxlarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_today_date" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_label_degree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\u2103"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_xxlarge"
+                app:layout_constraintStart_toEndOf="@+id/tv_temperature"
+                app:layout_constraintTop_toTopOf="@+id/tv_temperature" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_label_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_mlarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_temperature"
+                tools:text="" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_label_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_mlarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_name"
+                tools:text="" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_label_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_mlarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_wind"
+                tools:text="" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_label_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_mlarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_pressure"
+                tools:text="" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_label_sun_rise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_mlarge"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_humidity"
+                tools:text="" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_label_sun_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_mlarge"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_sun_rise"
+                tools:text="" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_sun_set"
+                tools:ignore="MissingConstraints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
