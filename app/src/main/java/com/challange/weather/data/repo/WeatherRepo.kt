@@ -27,6 +27,19 @@ class WeatherRepo @Inject constructor(
             }
     }
 
+    fun getCityWeatherDetailByLatLong(latitude: String,longitude: String): Observable<AppResponse<*>> {
+        return weatherApi.getCityWeatherDetailByLatLong(latitude,longitude,
+            ApiConstants.WEATHER_METRIC, BuildConfig.weather_api_key
+        )
+            .map { weatherResponse ->
+                if (weatherResponse.cod == 200) {
+                    AppResponse.success(weatherResponse)
+                } else {
+                    AppResponse.error(Throwable(message = weatherResponse.message))
+                }
+            }
+    }
+
     /*------------------------------------Api Implementation Ends------------------------------------*/
 
 }

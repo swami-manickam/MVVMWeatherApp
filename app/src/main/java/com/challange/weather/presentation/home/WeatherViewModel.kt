@@ -42,4 +42,37 @@ class WeatherViewModel @Inject constructor() : BaseViewModel() {
     }
 
 
+    fun fetchWeatherDetailByLatLong(latitude: String,longitude: String): MutableLiveData<ResponseState<Any>> {
+        val response = MutableLiveData<ResponseState<Any>>()
+        val weatherObservable = weatherRepo.getCityWeatherDetailByLatLong(latitude,longitude)
+
+        weatherObservable
+            .applySchedulers()
+            .doOnSubscribe {
+                response.value = Loading(true)
+            }
+            .doOnTerminate {
+                response.value = Loading(false)
+            }
+            .subscribe({ apiResponse ->
+                if (apiResponse.data != null) {
+                    response.value = Success(apiResponse.data as WeatherDataModel)
+                } else {
+                    response.value = Failure(
+                        apiResponse.throwable
+                            ?: Throwable(AppConstants.ERROR_MSG_STAY_TUNED)
+                    )
+                }
+            }, { throwable ->
+                response.value = Failure(throwable)
+            })
+        return response
+    }
+
+
+
+
+
+
+
 }

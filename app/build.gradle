@@ -82,6 +82,7 @@ kapt {
 dependencies {
 
     implementation deps.core_ktx
+    implementation 'com.google.android.gms:play-services-basement:18.1.0'
 
     /*Testing Tools*/
     testImplementation deps.junit
@@ -186,6 +187,8 @@ dependencies {
     implementation deps.room.runtime
     kapt deps.room.compiler
     implementation deps.room.ktx
+
+    implementation deps.gms_loc
 
     /*Joda Time Lib*/
     implementation 'joda-time:joda-time:2.10.6'
